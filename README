@@ -1,0 +1,50 @@
+Nume si prenume: NEDELCU ANA-FLORENTINA
+Grupa: 325CC
+Gradul de dificultate: mediu spre dificil
+Timpul alocat: 40 de ore
+Tema a fost implementata folosind Eclipse Juno, kitul de Java JRE7, 
+sistemul de operare Windows 7, 64b. Aplicatia are ca dependente fisierele 
+xstream-1.4.3.jar si xpp3-1.1.4c.jar, care se gasesc in folderul de radacina 
+al proiectului (MyLibrary), acolo avand setat si classpath-ul.
+
+Modul de implementare:
+
+Am implementat toate functionalitatile care se cer in enunt, fara bonusuri.
+Interfata grafica nu este foarte complexa si nu are un aspect si aranjament prea frumos(nu am folosit JForm Designer, toate implementarile le-am facut de mana).
+Desi nu prefer aplicatiile in limba romana, aplicatia aceasta este in limba romana deoarece asa mi s-a parut normal, avand in vedere ca noi studiem cursul in limba romana.
+
+Proiectul contine urmatoarele pachete:
+- element - cele 6 clase cerute in enunt
+- intefaces - cele 4 interfete existente in arhiva de pornire
+- graphics - clasele Main Window, FileFrame, CenterFrame
+- viewBook - clasa abstracta AbstractViewMode si clasele BookInterface
+				si ViewEditPanels
+- pachetul default - clasa MainClass, care contine functia Main
+
+Detalierea claselor	
+
+Clasele din pachetul element implementeaza interfetele cerute in enunt (metodele impuse) si mai contin metode necesare operatiilor cu membrii claselor (tinand cont
+ca acestia sunt definiti "private", au nevoie de metode get si set pentru a fi accesati).
+ 
+			
+Clasa MainWindow implementeaza fereastra principala cu toate elementele ei (inclusiv
+ascultatorii elementelor) si fereastra prin care se adauga o carte.
+
+Clasa FileFrame implementeaza fereastra in care se introduce numele fisierului xml
+din care sa se importe/in care sa se salveze biblioteca utilizata. (In campul 
+respectiv, trebuie sa se introduca un nume de fisier cu extensia .xml; acest fisier 
+trebuie sa existe/ va fi salvat in folderul radacina al proiectului (MyLibrary). 
+Aceasta fereastra apare de cate ori apare o modificare in biblioteca actuala (cand se adauga/sterge o carte cand se salveaza modificarile din AuthorMode). Fisierul al carui nume apare implicit atunci cand se salveaza starea bibliotecii este fisierul in care s-a salvat ultima data sau cel din care a fost importata biblioteca. Daca nu se doreste salvarea bibliotecii in fisier in acel moment, se va folosi butonul Anulare.
+
+Clasa CenterFrame contine o metoda statica de centrare a unei ferestre pe care o 
+primeste constructorul ei ca parametru.
+
+
+Clasa BookInterface implementeaza fereastra pentru vizualizarea unei carti in cele doua moduri (Publish si Author).
+
+Clasa ViewEditPanels mosteneste clasa abstracta AbstractViewMode si implementeaza cele doua metode ce construiesc cele doua panel-uri pentru modurile de afisare ale unei carti(toate elementele continute de acestea impreuna cu ascultatorii lor). In PublishMode, continuturile capitolelor le-am pus in JText Area-uri care nu sunt editabile in loc de JTextLabel. Modificarile din AuthorMode se afiseaza in PublishMode doar dupa ce a fost apasat butonul de salvare. 
+
+Exista mesaje de eroare atunci cand se adauga o carte, desi nu a fost creata/importata nicio biblioteca.
+
+Tema a fost interesanta, am invatat multe lucruri noi si am aplicat ceea ce am invatat la curs, dar au existat de asemenea si cerinte mai ambigue in enunt, mai ales datorita faptului ca eu cel putin am fost obisnuita cu teme in care nu ni se lasa prea multa libertate in alegerea modului de realizare a diverselor task-uri, ci ni se impuneau anumite reguli destul de bine stabilite.
+
